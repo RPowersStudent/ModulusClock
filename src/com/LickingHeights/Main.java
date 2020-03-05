@@ -20,6 +20,6 @@ public class Main {
         minute=keyboard.nextInt();
 
         hour = minute > 59? hour + (minute/60): hour;
-
+        hour = (hour%12+1);
     }
 }
