@@ -11,14 +11,15 @@ public class Main {
         int hour;
         int minute;
         Scanner keyboard;
-        keyboard=Scanner(System.in);
+        keyboard= new Scanner(System.in);
 
         System.out.println("Please type the hour");
         hour=keyboard.nextInt();
 
-        System.out.println("please type the minutes");
+        System.out.println("please type the minute");
         minute=keyboard.nextInt();
 
+        hour = minute > 59? hour + (minute/60): hour;
 
     }
 }
