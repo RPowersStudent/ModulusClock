@@ -21,5 +21,7 @@ public class Main {
 
         hour = minute > 59? hour + (minute/60): hour;
         hour = (hour%12+1);
+        minute = (minute%60);
+
     }
 }
