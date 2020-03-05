@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	    ModulusClock();
     }
     public static void ModulusClock(){
         int hour;
@@ -20,8 +20,10 @@ public class Main {
         minute=keyboard.nextInt();
 
         hour = minute > 59? hour + (minute/60): hour;
-        hour = (hour%12+1);
+        hour = (hour%12);
+        hour = hour == 0 ? 12 : hour;
         minute = (minute%60);
 
+        System.out.printf("The time is %d:%02d", hour, minute);
     }
 }
